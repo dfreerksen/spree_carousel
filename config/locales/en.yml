@@ -1,4 +1,124 @@
 ---
 en:
   spree:
-    carousel: Blah
+    carousel:
+      prev: Previous
+      next: Next
+      admin:
+        sidebar: Carousels
+        none: No carousels available
+        title:
+          index: Carousels
+          edit: 'Edit Carousel `%{title}`'
+          new: New Carousel
+        buttons:
+          back: Back to Carousel List
+          create: New Carousel
+        headers:
+          title: Title
+        legends:
+          general: Carousel
+          items: Items
+          navigation: Navigation
+          touch: Mobile
+        flash:
+          success:
+            create: Carousel has been created
+            update: Carousel has been updated
+            delete: Carousel has been deleted
+        label:
+          title: Title
+          show_title: Show Title
+          location: Location
+          randomize: Randomize
+          accessibility: Accessibility
+          autoplay: Autoplay
+          autoplay_speed: Autoplay Speed
+          arrows: Arrows
+          center_mode: Center Mode
+          center_padding: Center Padding
+          dots: Dots
+          draggable: Draggable
+          fade: Fade
+          focus_on_select: Focus On Select
+          easing: Easing
+          infinite: Infinite
+          lazy_load: Lazy Load
+          pause_on_hover: Pause On Hover
+          pause_on_dots_hover: Pause On Dots Hover
+          slides_to_show: Slides To Show
+          slides_to_scroll: Slides To Scroll
+          speed: Speed
+          swipe: Swipe
+          touch_move: Touch Move
+          touch_threshold: Touch Threshold
+          use_css: Use CSS
+        description:
+          title: Title of carousel
+          show_title: Show Title
+          location: Location to display carousel
+          randomize: Random ordering of carousel items
+          accessibility: Enables tabbing and arrow key navigation
+          autoplay: Enables Autoplay
+          autoplay_speed: Autoplay Speed in milliseconds (1 second = 1000 milliseconds)
+          arrows: Show Prev/Next Arrows
+          center_mode: Enables centered view with partial prev/next slides. Use with odd numbered slidesToShow counts.
+          center_padding: Side padding when in center mode (px or %)
+          dots: Show dot indicators
+          draggable: Enable mouse dragging
+          fade: Enable fade
+          focus_on_select: Enable focus on selected element (click)
+          easing: Easing for Javascript animate.
+          infinite: Infinite loop sliding
+          lazy_load: Set lazy loading technique.
+          pause_on_hover: Pause Autoplay On Hover
+          pause_on_dots_hover: Pause Autoplay when a dot is hovered
+          slides_to_show: Number of slides to show
+          slides_to_scroll: Number of slides to scroll
+          speed: Slide/Fade animation speed
+          swipe: Enable swiping
+          touch_move: Enable slide motion with touch
+          touch_threshold: To advance slides, the user must swipe a length of (1/touchThreshold) * the width of the slider.
+          use_css: Enable/Disable CSS Transitions
+        location:
+          home: Top of home page only
+          top_all: Top of all pages
+          bottom_all: Bottom of all pages
+          bottom_product: Under product detail pages
+          sidebar_listing: Sidebar only on listing pages (vertical)
+          sidebar_product: Sidebar only on product pages (vertical)
+        lazyload:
+          ondemand: On Demand
+          progressive: Progressive
+        easing:
+          linear: linear
+          easeinsine: easeInSine
+          easeoutsine: easeOutSine
+          easeinoutsine: easeInOutSine
+          easeinquad: easeInQuad
+          easeoutquad: easeOutQuad
+          easeinoutquad: easeInOutQuad
+          easeincubic: easeInCubic
+          easeoutcubic: easeOutCubic
+          easeinoutcubic: easeInOutCubic
+          easeinquart: easeInQuart
+          easeoutquart: easeOutQuart
+          easeinoutquart: easeInOutQuart
+          easeinquint: easeInQuint
+          easeoutquint: easeOutQuint
+          easeinoutquint: easeInOutQuint
+          easeinexpo: easeInExpo
+          easeoutexpo: easeOutExpo
+          easeinoutexpo: easeInOutExpo
+          easeincirc: easeInCirc
+          easeoutcirc: easeOutCirc
+          easeinoutcirc: easeInOutCirc
+          easeinback: easeInBack
+          easeoutback: easeOutBack
+          easeinoutback: easeInOutBack
+          easeinelastic: easeInElastic
+          easeoutelastic: easeOutElastic
+          easeinoutelastic: easeInOutElastic
+          easeinbounce: easeInBounce
+          easeoutbounce: easeOutBounce
+          easeinoutbounce: easeInOutBounce

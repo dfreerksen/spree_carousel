@@ -1,0 +1,15 @@
+<%= render 'spree/admin/shared/configuration_menu' %>
+
+<% content_for :page_title do %>
+  <%= Spree.t('carousel.admin.title.edit', title: @carousel.title) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li><%= link_to_with_icon 'arrow-left', Spree.t('carousel.admin.buttons.back'), admin_carousels_path, class: 'button' %></li>
+<% end %>
+
+<%= render partial: 'spree/shared/error_messages', locals: { target: @carousel } %>
+
+<%= form_for @carousel, url: admin_carousels_path(@carousel) do |f| %>
+  <%= render 'form', f: f %>
+<% end %>

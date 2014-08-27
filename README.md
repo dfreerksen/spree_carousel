@@ -1,6 +1,8 @@
 # Spree Carousel
 
-Carousel for Spree. **Not ready for production**
+Create multiple carousels and display them in different areas of the site using [http://kenwheeler.github.io/slick/](Slick)
+
+> NOTE: Not ready for production
 
 
 ## Installation
@@ -16,6 +18,13 @@ Run the bundle command to install it:
 After installing, you'll need to run the generator:
 
     bundle exec rails g spree_carousel:install
+
+
+## TODO
+- Deleting carousel should also delete items
+- More types of content
+  - HTML content
+  - Image content with upload
 
 
 ## Testing

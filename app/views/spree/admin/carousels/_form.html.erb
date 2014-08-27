@@ -1,0 +1,221 @@
+<fieldset data-hook="admin_carousel_form_fields" class="no-border-top">
+  <fieldset data-hook="admin_carousel_form_fields" class="no-border-top">
+    <legend align="center"><%= Spree.t('carousel.admin.legends.general') %></legend>
+
+    <div class="row">
+      <div class="field">
+        <%= f.label :title, Spree.t('carousel.admin.label.title') %>
+        <%= f.text_field :title, class: 'fullwidth' %>
+        <span class="info fullwidth"><%= Spree.t('carousel.admin.description.title') %></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :easing, Spree.t('carousel.admin.label.easing') %>
+          <%= f.select :easing, carousel_easing_values, {}, { class: 'select2 fullwidth' } %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.easing') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :speed, Spree.t('carousel.admin.label.speed') %>
+          <%= f.select :speed, carousel_speed_values, {}, { class: 'select2 fullwidth' } %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.speed') %></span>
+        </div>
+      </div>
+
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :lazy_load, Spree.t('carousel.admin.label.lazy_load') %>
+          <%= f.select :lazy_load, carousel_lazy_load_values, {}, { class: 'select2 fullwidth' } %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.lazy_load') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :autoplay_speed, Spree.t('carousel.admin.label.autoplay_speed') %>
+          <%= f.select :autoplay_speed, carousel_autoplay_speed_values, {}, { class: 'select2 fullwidth' } %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.autoplay_speed') %></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :show_title, Spree.t('carousel.admin.label.show_title') %>
+          <%= f.check_box :show_title %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.show_title') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :autoplay, Spree.t('carousel.admin.label.autoplay') %>
+          <%= f.check_box :autoplay %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.autoplay') %></span>
+        </div>
+      </div>
+
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :infinite, Spree.t('carousel.admin.label.infinite') %>
+          <%= f.check_box :infinite %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.infinite') %></span>
+        </div>
+      </div>
+
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :use_css, Spree.t('carousel.admin.label.use_css') %>
+          <%= f.check_box :use_css %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.use_css') %></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <%= f.label :location, Spree.t('carousel.admin.label.location') %>
+        <%= f.select :location, carousel_location_values, {}, { class: 'select2 fullwidth' } %>
+        <span class="info fullwidth"><%= Spree.t('carousel.admin.description.location') %></span>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset data-hook="admin_carousel_form_fields" class="no-border-top">
+    <legend align="center"><%= Spree.t('carousel.admin.legends.items') %></legend>
+
+    <div class="row">
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :randomize, Spree.t('carousel.admin.label.randomize') %>
+          <%= f.check_box :randomize %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.randomize') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :slides_to_show, Spree.t('carousel.admin.label.slides_to_show') %>
+          <%= f.number_field :slides_to_show, class: 'fullwidth' %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.slides_to_show') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :slides_to_scroll, Spree.t('carousel.admin.label.slides_to_scroll') %>
+          <%= f.number_field :slides_to_scroll, class: 'fullwidth' %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.slides_to_scroll') %></span>
+        </div>
+      </div>
+
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :fade, Spree.t('carousel.admin.label.fade') %>
+          <%= f.check_box :fade %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.fade') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :center_mode, Spree.t('carousel.admin.label.center_mode') %>
+          <%= f.check_box :center_mode %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.center_mode') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :center_padding, Spree.t('carousel.admin.label.center_padding') %>
+          <%= f.number_field :center_padding, class: 'fullwidth' %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.center_padding') %></span>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset data-hook="admin_carousel_form_fields" class="no-border-top">
+    <legend align="center"><%= Spree.t('carousel.admin.legends.navigation') %></legend>
+
+    <div class="row">
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :arrows, Spree.t('carousel.admin.label.arrows') %>
+          <%= f.check_box :arrows %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.arrows') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :dots, Spree.t('carousel.admin.label.dots') %>
+          <%= f.check_box :dots %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.dots') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :accessibility, Spree.t('carousel.admin.label.accessibility') %>
+          <%= f.check_box :accessibility %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.accessibility') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :draggable, Spree.t('carousel.admin.label.draggable') %>
+          <%= f.check_box :draggable %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.draggable') %></span>
+        </div>
+      </div>
+
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :pause_on_hover, Spree.t('carousel.admin.label.pause_on_hover') %>
+          <%= f.check_box :pause_on_hover %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.pause_on_hover') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :pause_on_dots_hover, Spree.t('carousel.admin.label.pause_on_dots_hover') %>
+          <%= f.check_box :pause_on_dots_hover %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.pause_on_dots_hover') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :focus_on_select, Spree.t('carousel.admin.label.focus_on_select') %>
+          <%= f.check_box :focus_on_select %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.focus_on_select') %></span>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset data-hook="admin_carousel_form_fields" class="no-border-top">
+    <legend align="center"><%= Spree.t('carousel.admin.legends.touch') %></legend>
+
+    <div class="row">
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :swipe, Spree.t('carousel.admin.label.swipe') %>
+          <%= f.check_box :swipe %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.swipe') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :touch_move, Spree.t('carousel.admin.label.touch_move') %>
+          <%= f.check_box :touch_move %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.touch_move') %></span>
+        </div>
+      </div>
+
+      <div class="alpha six columns">
+        <div class="field">
+          <%= f.label :touch_threshold, Spree.t('carousel.admin.label.touch_threshold') %>
+          <%= f.number_field :touch_threshold, class: 'fullwidth' %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.touch_threshold') %></span>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset data-hook="admin_carousel_form_fields" class="no-border-top">
+    <div class="form-buttons filter-actions actions" data-hook="buttons">
+      <% if f.object.id.nil? %>
+        <%= button Spree.t('actions.create'), 'refresh' %>
+      <% else %>
+        <%= button Spree.t('actions.update'), 'refresh' %>
+      <% end %>
+      <span class="or"><%= Spree.t(:or) %></span>
+      <%= link_to_with_icon 'remove', Spree.t('actions.cancel'), admin_carousels_path, class: 'button' %>
+    </div>
+  </fieldset>
+</fieldset>
