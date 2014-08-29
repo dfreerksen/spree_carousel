@@ -3,12 +3,12 @@ module Spree
     module CarouselsHelper
       def carousel_location_values
         {
-          Spree.t('carousel.admin.location.home')            => 'home',
-          Spree.t('carousel.admin.location.top_all')         => 'top_all',
-          Spree.t('carousel.admin.location.bottom_all')      => 'bottom_all',
-          Spree.t('carousel.admin.location.bottom_product')  => 'bottom_product',
-          Spree.t('carousel.admin.location.sidebar_listing') => 'sidebar_listing',
-          Spree.t('carousel.admin.location.sidebar_product') => 'sidebar_product'
+          Spree.t('carousel.admin.location.home')             => 'home',
+          Spree.t('carousel.admin.location.wrapper_top')      => 'wrapper_top',
+          Spree.t('carousel.admin.location.wrapper_bottom')   => 'wrapper_bottom',
+          Spree.t('carousel.admin.location.sidebar_home')     => 'sidebar_home',
+          Spree.t('carousel.admin.location.sidebar_products') => 'sidebar_products',
+          Spree.t('carousel.admin.location.products')         => 'products'
         }
       end
 
@@ -57,18 +57,22 @@ module Spree
 
       def carousel_speed_values
         speed = []
-        (100..2000).step(25) do |n|
-          speed << n
-        end
+        (100..2000).step(25) { |n| speed << n }
         speed
       end
 
       def carousel_autoplay_speed_values
         speed = []
-        (100..10000).step(50) do |n|
-          speed << n
-        end
+        (100..10000).step(50) { |n| speed << n }
         speed
+      end
+
+      def carousel_slides_values
+        (1..10)
+      end
+
+      def carousel_limit_values
+        (1..20)
       end
     end
   end

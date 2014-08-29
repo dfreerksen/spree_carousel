@@ -1,0 +1,37 @@
+<script type="text/javascript">
+//<![CDATA[
+  $("#carousel<%= carousel.id %> .slider").slick({
+    appendArrows:     $("#carousel<%= carousel.id %> .slick-arrows"),
+    prevArrow:        '<button type="button" class="slick-prev"><%= Spree.t('carousel.prev') %></button>',
+    nextArrow:        '<button type="button" class="slick-next"><%= Spree.t('carousel.next') %></button>',
+    asNavFor:         null,
+    responsive:       [],
+    slide:            'div',
+    rtl:              false,
+    cssEase:          'ease',
+    vertical:         <%= vertical %>,
+    accessibility:    <%= carousel.accessibility %>,
+    autoplay:         <%= carousel.autoplay %>,
+    autoplaySpeed:    <%= carousel.autoplay_speed %>,
+    arrows:           <%= carousel.arrows %>,
+    centerMode:       <%= carousel.center_mode %>,
+    centerPadding:    '<%= carousel.center_padding %>',
+    dots:             <%= carousel.dots %>,
+    draggable:        <%= carousel.draggable %>,
+    fade:             <%= carousel.fade %>,
+    focusOnSelect:    <%= carousel.focus_on_select %>,
+    easing:           '<%= carousel.easing %>',
+    infinite:         <%= carousel.infinite %>,
+    lazyLoad:         '<%= carousel.lazy_load %>',
+    pauseOnHover:     <%= carousel.pause_on_hover %>,
+    pauseOnDotsHover: <%= carousel.pause_on_dots_hover %>,
+    slidesToShow:     <%= vertical ? 1 : carousel.slides_to_show %>,
+    slidesToScroll:   <%= vertical ? 1 : carousel.slides_to_scroll %>,
+    speed:            <%= carousel.speed %>,
+    swipe:            <%= carousel.swipe %>,
+    touchMove:        <%= carousel.touch_move %>,
+    touchThreshold:   <%= carousel.touch_threshold %>,
+    useCSS:           <%= carousel.use_css %>
+  });
+//]]>
+</script>

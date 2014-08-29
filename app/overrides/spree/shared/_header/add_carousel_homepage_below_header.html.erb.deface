@@ -1,0 +1,4 @@
+<!-- insert_after '#header' -->
+<% if current_page?(root_path) && carousel = Spree::Carousel.home_location %>
+  <%= render partial: 'spree/shared/carousel', locals: { carousel: carousel, vertical: false } %>
+<% end %>

@@ -3,51 +3,19 @@
   <h3 class="carousel-title"><%= carousel.title %></h3>
   <% end %>
   <div class="slider">
-    <% items = carousel.carousel_items %>
+    <% if carousel.group == 'featured' %>
+      <% items = Spree::Product.featured.limit(5) %>
+    <% elsif carousel.group == 'latest' %>
+      <% items = Spree::Product.latest.limit(5) %>
+    <% else %>
+      <% items = [] %>
+    <% end %>
     <% items = items.shuffle if carousel.randomize %>
     <% items.each do |item| %>
-    <div>
-      <%= link_to small_image(item.product, :itemprop => "image"), '#', :itemprop => 'url' %>
-      <span class="price selling" itemprop="price"><%= display_price(item.product) %></span>
-    </div>
+    <div><%= item.id %></div>
     <% end %>
   </div>
   <div class="slick-arrows"></div>
 </div>
 
-<script type="text/javascript">
-  $("#carousel<%= carousel.id %> .slider").slick({
-    appendArrows:     $("#carousel<%= carousel.id %> .slick-arrows"),
-    prevArrow:        '<button type="button" class="slick-prev"><%= Spree.t('carousel.prev') %></button>',
-    nextArrow:        '<button type="button" class="slick-next"><%= Spree.t('carousel.next') %></button>',
-    asNavFor:         null,
-    responsive:       [],
-    slide:            'div',
-    vertical:         false,
-    rtl:              false,
-    cssEase:          'ease',
-
-    accessibility:    <%= carousel.accessibility %>,
-    autoplay:         <%= carousel.autoplay %>,
-    autoplaySpeed:    <%= carousel.autoplay_speed %>,
-    arrows:           <%= carousel.arrows %>,
-    centerMode:       <%= carousel.center_mode %>,
-    centerPadding:    '<%= carousel.center_padding %>',
-    dots:             <%= carousel.dots %>,
-    draggable:        <%= carousel.draggable %>,
-    fade:             <%= carousel.fade %>,
-    focusOnSelect:    <%= carousel.focus_on_select %>,
-    easing:           '<%= carousel.easing %>',
-    infinite:         <%= carousel.infinite %>,
-    lazyLoad:         '<%= carousel.lazy_load %>',
-    pauseOnHover:     <%= carousel.pause_on_hover %>,
-    pauseOnDotsHover: <%= carousel.pause_on_dots_hover %>,
-    slidesToShow:     <%= carousel.slides_to_show %>,
-    slidesToScroll:   <%= carousel.slides_to_scroll %>,
-    speed:            <%= carousel.speed %>,
-    swipe:            <%= carousel.swipe %>,
-    touchMove:        <%= carousel.touch_move %>,
-    touchThreshold:   <%= carousel.touch_threshold %>,
-    useCSS:           <%= carousel.use_css %>
-  });
-</script>
+<%= render partial: 'spree/shared/carousel_js', locals: { carousel: carousel, vertical: vertical } %>

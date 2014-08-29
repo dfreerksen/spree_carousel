@@ -21,13 +21,25 @@ describe Spree::Admin::CarouselsHelper do
 
   context '#speed_values' do
     it 'should return 77 items' do
-      expect(helper.speed_values).to have(77).items
+      expect(helper.carousel_speed_values).to have(77).items
     end
   end
 
   context '#autoplay_speed_values' do
     it 'should return 199 items' do
-      expect(helper.autoplay_speed_values).to have(199).items
+      expect(helper.carousel_autoplay_speed_values).to have(199).items
+    end
+  end
+
+  context '#carousel_slides_values' do
+    it 'should return 10 items' do
+      expect(helper.carousel_slides_values).to have(10).items
+    end
+  end
+
+  context '#carousel_limit_values' do
+    it 'should return 20 items' do
+      expect(helper.carousel_limit_values).to have(20).items
     end
   end
 end

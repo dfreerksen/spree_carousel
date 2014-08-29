@@ -5,6 +5,17 @@ Create multiple carousels and display them in different areas of the site using 
 > NOTE: Not ready for production
 
 
+## Carousel Types
+
+#### Featured
+
+Populate the carousel with products marked as 'Featured' in the admin.
+
+#### Recent
+
+Populate the carousel with recently created products based on `created_at` column in the database.
+
+
 ## Installation
 
 Add this line to your Spree application's Gemfile:
@@ -21,7 +32,8 @@ After installing, you'll need to run the generator:
 
 
 ## TODO
-- Deleting carousel should also delete items
+- Add 'limit' column to specify the number of items to populate in the carousel
+- Add 'popular' carousel based on purchases
 - More types of content
   - HTML content
   - Image content with upload

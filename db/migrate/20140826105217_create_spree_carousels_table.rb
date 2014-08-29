@@ -1,9 +1,12 @@
 class CreateSpreeCarouselsTable < ActiveRecord::Migration
-  def change
+  def up
+    add_column :spree_products, :featured, :boolean, default: false, null: false
+
     create_table :spree_carousels do |t|
       t.string     :title,                                    null: false, unique: true
-      t.boolean    :show_title,          default: false
-      t.string     :location,                                 null: false
+      t.boolean    :show_title,          default: true
+      t.string     :group,               default: 'latest',   null: false
+      t.string     :location,            default: nil,        null: true
       t.boolean    :randomize,           default: true
       t.boolean    :accessibility,       default: true
       t.boolean    :autoplay,            default: true
@@ -15,9 +18,9 @@ class CreateSpreeCarouselsTable < ActiveRecord::Migration
       t.boolean    :draggable,           default: true
       t.boolean    :fade,                default: false
       t.boolean    :focus_on_select,     default: false
-      t.string     :easing,              default: 'linear',   null: false
+      t.string     :easing,              default: 'linear'
       t.boolean    :infinite,            default: true
-      t.string     :lazy_load,           default: 'ondemand', null: false
+      t.string     :lazy_load,           default: 'ondemand'
       t.boolean    :pause_on_hover,      default: true
       t.boolean    :pause_on_dots_hover, default: false
       t.integer    :slides_to_show,      default: 1
@@ -29,5 +32,18 @@ class CreateSpreeCarouselsTable < ActiveRecord::Migration
       t.boolean    :use_css,             default: true
       t.timestamps
     end
+
+    [
+      ['Featured Products', 'featured'],
+      ['Latest Products',   'latest']
+    ].each do |title, group|
+      Spree::Carousel.create!(title: title, group: group)
+    end
+  end
+
+  def down
+    remove_column :spree_products, :featured
+
+    drop_table :spree_carousels
   end
 end

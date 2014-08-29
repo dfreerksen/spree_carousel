@@ -71,14 +71,6 @@
         </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="field">
-        <%= f.label :location, Spree.t('carousel.admin.label.location') %>
-        <%= f.select :location, carousel_location_values, {}, { class: 'select2 fullwidth' } %>
-        <span class="info fullwidth"><%= Spree.t('carousel.admin.description.location') %></span>
-      </div>
-    </div>
   </fieldset>
 
   <fieldset data-hook="admin_carousel_form_fields" class="no-border-top">
@@ -94,14 +86,20 @@
 
         <div class="field">
           <%= f.label :slides_to_show, Spree.t('carousel.admin.label.slides_to_show') %>
-          <%= f.number_field :slides_to_show, class: 'fullwidth' %>
+          <%= f.select :slides_to_show, carousel_slides_values, {}, { class: 'select2 fullwidth' } %>
           <span class="info fullwidth"><%= Spree.t('carousel.admin.description.slides_to_show') %></span>
         </div>
 
         <div class="field">
           <%= f.label :slides_to_scroll, Spree.t('carousel.admin.label.slides_to_scroll') %>
-          <%= f.number_field :slides_to_scroll, class: 'fullwidth' %>
+          <%= f.select :slides_to_scroll, carousel_slides_values, {}, { class: 'select2 fullwidth' } %>
           <span class="info fullwidth"><%= Spree.t('carousel.admin.description.slides_to_scroll') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :limit, Spree.t('carousel.admin.label.limit') %>
+          <%= f.select :limit, carousel_limit_values, {}, { class: 'select2 fullwidth' } %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.limit') %></span>
         </div>
       </div>
 
@@ -120,7 +118,7 @@
 
         <div class="field">
           <%= f.label :center_padding, Spree.t('carousel.admin.label.center_padding') %>
-          <%= f.number_field :center_padding, class: 'fullwidth' %>
+          <%= f.text_field :center_padding, class: 'fullwidth' %>
           <span class="info fullwidth"><%= Spree.t('carousel.admin.description.center_padding') %></span>
         </div>
       </div>

@@ -7,6 +7,7 @@ en:
       admin:
         sidebar: Carousels
         none: No carousels available
+        no_display: Do not display
         title:
           index: Carousels
           edit: 'Edit Carousel `%{title}`'
@@ -15,7 +16,9 @@ en:
           back: Back to Carousel List
           create: New Carousel
         headers:
-          title: Title
+          title: Name
+          group: Type
+          location: Location
         legends:
           general: Carousel
           items: Items
@@ -27,9 +30,11 @@ en:
             update: Carousel has been updated
             delete: Carousel has been deleted
         label:
+          featured: Featured
           title: Title
           show_title: Show Title
           location: Location
+          limit: Limit
           randomize: Randomize
           accessibility: Accessibility
           autoplay: Autoplay
@@ -57,6 +62,7 @@ en:
           title: Title of carousel
           show_title: Show Title
           location: Location to display carousel
+          limit: Limit the number of products to display
           randomize: Random ordering of carousel items
           accessibility: Enables tabbing and arrow key navigation
           autoplay: Enables Autoplay
@@ -82,11 +88,11 @@ en:
           use_css: Enable/Disable CSS Transitions
         location:
           home: Top of home page only
-          top_all: Top of all pages
-          bottom_all: Bottom of all pages
-          bottom_product: Under product detail pages
-          sidebar_listing: Sidebar only on listing pages (vertical)
-          sidebar_product: Sidebar only on product pages (vertical)
+          wrapper_top: Top of all pages
+          wrapper_bottom: Bottom of all pages
+          sidebar_home: Sidebar on home page (vertical)
+          sidebar_products: Sidebar on listing pages (vertical)
+          products: Under product details
         lazyload:
           ondemand: On Demand
           progressive: Progressive

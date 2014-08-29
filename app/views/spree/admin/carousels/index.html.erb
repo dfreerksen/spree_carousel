@@ -4,18 +4,18 @@
   <%= Spree.t('carousel.admin.title.index') %>
 <% end %>
 
-<% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t('carousel.admin.buttons.create'), new_admin_carousel_path, icon: 'plus' %></li>
-<% end %>
-
 <table class="index" id='listing_carousels' data-hook>
   <colgroup>
-    <col style="width: 85%" />
+    <col style="width: 65%" />
     <col style="width: 15%" />
+    <col style="width: 15%" />
+    <col style="width: 5%" />
   </colgroup>
   <thead>
     <tr data-hook="tax_header">
       <th><%= Spree.t('carousel.admin.headers.title') %></th>
+      <th><%= Spree.t('carousel.admin.headers.group') %></th>
+      <th><%= Spree.t('carousel.admin.headers.location') %></th>
       <th class="actions"></th>
     </tr>
   </thead>
@@ -24,9 +24,10 @@
     <% @carousels.each do |carousel| %>
     <tr data-hook="links_row" class="<%= cycle('odd', 'even')%>">
       <td><%= carousel.title %></td>
+      <td><%= carousel.group %></td>
+      <td><%= carousel.location %></td>
       <td class="actions">
         <%= link_to_edit(carousel, { no_text: true, url: edit_admin_carousel_path(carousel.id) }) %>
-        <%= link_to_delete(carousel, { no_text: true, url: admin_carousel_path(carousel.id) }) %>
       </td>
     </tr>
     <% end %>

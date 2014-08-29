@@ -1,0 +1,7 @@
+<!-- insert_after '[data-hook="admin_product_form_available_on"]' -->
+<div data-hook="admin_product_form_featured">
+  <%= f.field_container :featured do %>
+    <%= f.label :featured, Spree.t('carousel.admin.label.featured') %>
+    <%= f.check_box :featured %>
+  <% end %>
+</div>

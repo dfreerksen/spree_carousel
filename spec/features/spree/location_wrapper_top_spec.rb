@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Home page' do
+feature 'Top of all pages' do
   %w(featured latest).each do |group|
     context "`#{group}`carousel" do
       xit 'shows when enabled' do
