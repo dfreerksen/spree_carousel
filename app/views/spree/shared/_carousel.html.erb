@@ -4,18 +4,18 @@
   <% end %>
   <div class="slider">
     <% if carousel.group == 'featured' %>
-      <% items = Spree::Product.featured.limit(5) %>
+      <% products = Spree::Product.featured.limit(carousel.limit) %>
     <% elsif carousel.group == 'latest' %>
-      <% items = Spree::Product.latest.limit(5) %>
+      <% products = Spree::Product.latest.limit(carousel.limit) %>
     <% else %>
-      <% items = [] %>
+      <% products = [] %>
     <% end %>
-    <% items = items.shuffle if carousel.randomize %>
-    <% items.each do |item| %>
-    <div><%= item.id %></div>
+    <% products = products.shuffle if carousel.randomize %>
+    <% products.each do |product| %>
+      <%= render partial: 'spree/shared/carousel_item', locals: { product: product } %>
     <% end %>
   </div>
   <div class="slick-arrows"></div>
 </div>
 
-<%= render partial: 'spree/shared/carousel_js', locals: { carousel: carousel, vertical: vertical } %>
+<%= render partial: 'spree/shared/carousel_js', locals: { carousel: carousel, sidebar: sidebar } %>

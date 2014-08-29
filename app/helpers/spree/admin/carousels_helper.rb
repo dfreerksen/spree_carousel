@@ -56,15 +56,11 @@ module Spree
       end
 
       def carousel_speed_values
-        speed = []
-        (100..2000).step(25) { |n| speed << n }
-        speed
+        (100..2000).step(25).each_with_object([]) { |n, speed| speed << n }
       end
 
       def carousel_autoplay_speed_values
-        speed = []
-        (100..10000).step(50) { |n| speed << n }
-        speed
+        (100..10000).step(50).each_with_object([]) { |n, speed| speed << n }
       end
 
       def carousel_slides_values

@@ -1,4 +1,4 @@
 <!-- insert_bottom '[data-hook="home_sidebar_navigation"]' -->
 <% if carousel = Spree::Carousel.sidebar_products_location %>
-  <%= render partial: 'spree/shared/carousel', locals: { carousel: carousel, vertical: true } %>
+  <%= render partial: 'spree/shared/carousel', locals: { carousel: carousel, sidebar: true } %>
 <% end %>

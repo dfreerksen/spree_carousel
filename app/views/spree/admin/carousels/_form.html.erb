@@ -53,6 +53,12 @@
           <%= f.check_box :autoplay %>
           <span class="info fullwidth"><%= Spree.t('carousel.admin.description.autoplay') %></span>
         </div>
+
+        <div class="field">
+          <%= f.label :fade, Spree.t('carousel.admin.label.fade') %>
+          <%= f.check_box :fade %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.fade') %></span>
+        </div>
       </div>
 
       <div class="alpha six columns">
@@ -95,21 +101,9 @@
           <%= f.select :slides_to_scroll, carousel_slides_values, {}, { class: 'select2 fullwidth' } %>
           <span class="info fullwidth"><%= Spree.t('carousel.admin.description.slides_to_scroll') %></span>
         </div>
-
-        <div class="field">
-          <%= f.label :limit, Spree.t('carousel.admin.label.limit') %>
-          <%= f.select :limit, carousel_limit_values, {}, { class: 'select2 fullwidth' } %>
-          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.limit') %></span>
-        </div>
       </div>
 
       <div class="alpha six columns">
-        <div class="field">
-          <%= f.label :fade, Spree.t('carousel.admin.label.fade') %>
-          <%= f.check_box :fade %>
-          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.fade') %></span>
-        </div>
-
         <div class="field">
           <%= f.label :center_mode, Spree.t('carousel.admin.label.center_mode') %>
           <%= f.check_box :center_mode %>
@@ -120,6 +114,12 @@
           <%= f.label :center_padding, Spree.t('carousel.admin.label.center_padding') %>
           <%= f.text_field :center_padding, class: 'fullwidth' %>
           <span class="info fullwidth"><%= Spree.t('carousel.admin.description.center_padding') %></span>
+        </div>
+
+        <div class="field">
+          <%= f.label :limit, Spree.t('carousel.admin.label.limit') %>
+          <%= f.select :limit, carousel_limit_values, {}, { class: 'select2 fullwidth' } %>
+          <span class="info fullwidth"><%= Spree.t('carousel.admin.description.limit') %></span>
         </div>
       </div>
     </div>

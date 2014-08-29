@@ -66,7 +66,7 @@ en:
           randomize: Random ordering of carousel items
           accessibility: Enables tabbing and arrow key navigation
           autoplay: Enables Autoplay
-          autoplay_speed: Autoplay Speed in milliseconds (1 second = 1000 milliseconds)
+          autoplay_speed: Autoplay speed in milliseconds (1000 milliseconds = 1 second)
           arrows: Show Prev/Next Arrows
           center_mode: Enables centered view with partial prev/next slides. Use with odd numbered slidesToShow counts.
           center_padding: Side padding when in center mode (px or %)
@@ -81,7 +81,7 @@ en:
           pause_on_dots_hover: Pause Autoplay when a dot is hovered
           slides_to_show: Number of slides to show
           slides_to_scroll: Number of slides to scroll
-          speed: Slide/Fade animation speed
+          speed: Slide/Fade animation speed in milliseconds (500 milliseconds = 1/2 second)
           swipe: Enable swiping
           touch_move: Enable slide motion with touch
           touch_threshold: To advance slides, the user must swipe a length of (1/touchThreshold) * the width of the slider.

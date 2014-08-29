@@ -1,4 +1,4 @@
 <!-- insert_after '#wrapper' -->
 <% if carousel = Spree::Carousel.bottom_location %>
-  <%= render partial: 'spree/shared/carousel', locals: { carousel: carousel, vertical: false } %>
+  <%= render partial: 'spree/shared/carousel', locals: { carousel: carousel, sidebar: false } %>
 <% end %>

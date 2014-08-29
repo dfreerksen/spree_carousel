@@ -70,6 +70,10 @@
   margin: 0;
   padding: 0;
 
+  &:focus {
+    outline: none;
+  }
+
   &.dragging {
     cursor: pointer;
     cursor: hand;
@@ -108,13 +112,34 @@
     pointer-events: none;
   }
 
-  img {
-    display: block;
-  }
-
   &.slick-active { }
 
   &.slick-cloned { }
+}
+
+// Items
+.slick-slide {
+  .product-title { }
+
+  .product-image {
+    img {
+      image-rendering: optimizeSpeed;
+      -ms-interpolation-mode: bicubic;
+      max-width: 100% !important;
+      height: auto;
+      border: 0;
+    }
+
+    @media \0screen {
+      img {
+        width: auto;
+      }
+    }
+  }
+
+  .product-description { }
+
+  .product-price { }
 }
 
 // Arrows

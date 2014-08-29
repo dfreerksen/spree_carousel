@@ -32,9 +32,9 @@ After installing, you'll need to run the generator:
 
 
 ## TODO
-- Add 'limit' column to specify the number of items to populate in the carousel
-- Add 'popular' carousel based on purchases
+- Per carousel breakpoints
 - More types of content
+  - 'popular' carousel based on purchases
   - HTML content
   - Image content with upload
 

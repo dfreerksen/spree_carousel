@@ -30,6 +30,7 @@ class CreateSpreeCarouselsTable < ActiveRecord::Migration
       t.boolean    :touch_move,          default: true
       t.integer    :touch_threshold,     default: 5
       t.boolean    :use_css,             default: true
+      t.integer    :limit,               default: 10,         null: false
       t.timestamps
     end
 
