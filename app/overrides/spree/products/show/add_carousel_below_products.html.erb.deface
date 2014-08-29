@@ -1,4 +1,4 @@
 <!-- insert_bottom '[data-hook="product_description"]' -->
-<% if carousel = Spree::Carousel.products_location %>
+<% if carousel = Spree::Carousel.products_location.first %>
   <%= render partial: 'spree/shared/carousel', locals: { carousel: carousel, sidebar: false } %>
 <% end %>

@@ -1,4 +1,4 @@
 <!-- insert_before '#wrapper' -->
-<% if carousel = Spree::Carousel.top_location %>
+<% if carousel = Spree::Carousel.top_location.first %>
   <%= render partial: 'spree/shared/carousel', locals: { carousel: carousel } %>
 <% end %>
