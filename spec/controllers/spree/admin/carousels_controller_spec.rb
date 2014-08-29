@@ -5,14 +5,14 @@ describe Spree::Admin::CarouselsController do
 
   let(:carousel)    { create(:carousel) }
   let(:index_path)  { spree.admin_carousels_path }
-#   let(:valid_item) do
-#     {
-#       url:   'https://twitter.com/spreecommerce',
-#       label: 'Follow me',
-#       icon:  'twitter'
-#     }
-#   end
-#   let(:invalid_item) { valid_item.merge!(url: '') }
+  # let(:valid_item) do
+  #   {
+  #     url:   'https://twitter.com/spreecommerce',
+  #     label: 'Follow me',
+  #     icon:  'twitter'
+  #   }
+  # end
+  # let(:invalid_item) { valid_item.merge!(url: '') }
 
   context '#index' do
     it 'loads `index` template' do

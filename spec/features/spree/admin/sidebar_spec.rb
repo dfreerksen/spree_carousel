@@ -9,7 +9,9 @@ feature 'Sidebar link' do
 
   it 'shows in the sidebar' do
     visit general_path
-    expect(page).to have_link(Spree.t('carousel.admin.sidebar'), href: carousel_path)
+    expect(page).to(
+      have_link(Spree.t('carousel.admin.sidebar'), href: carousel_path)
+    )
     expect(page).to_not have_css(element)
   end
 

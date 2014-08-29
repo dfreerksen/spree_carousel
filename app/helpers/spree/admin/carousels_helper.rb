@@ -2,7 +2,7 @@ module Spree
   module Admin
     module CarouselsHelper
       def carousel_location_values
-        options = %w(
+        %w(
           home wrapper_top wrapper_bottom sidebar_home sidebar_products products
         ).each_with_object({}) do |value, collection|
           collection[Spree.t("carousel.admin.location.#{value}")] = value
@@ -10,7 +10,7 @@ module Spree
       end
 
       def carousel_easing_values
-        options = %w(
+        %w(
           linear
           easeInSine easeOutSine easeInOutSine
           easeInQuad easeOutQuad easeInOutQuad
