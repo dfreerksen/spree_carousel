@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-feature 'Home page' do
+feature 'Taxon listing sidebar' do
   %w(featured latest).each do |type|
     let(:carousel) { create(:"carousel_#{type}") }
     let(:product)  { create(:product) }
-    let(:path)     { spree.root_path }
-    let(:location) { 'home' }
-    let(:element)  { '#header + .carousel' }
+    let(:taxonomy) { create(:taxonomy, name: 'Brands') }
+    let(:path)     { spree.nested_taxons_path(taxonomy.name.downcase) }
+    let(:element)  { '[data-hook="taxon_sidebar_navigation"] .carousel' }
 
     before { product.update_attribute(:featured, true) }
 
@@ -18,7 +18,7 @@ feature 'Home page' do
       end
 
       it 'shows when enabled' do
-        carousel.update_attribute(:location, location)
+        carousel.update_attribute(:location, 'sidebar')
         visit path
         expect(page).to have_css(element)
       end

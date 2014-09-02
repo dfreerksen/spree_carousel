@@ -10,7 +10,7 @@ feature 'Bottom of all pages' do
 
     before { product.update_attribute(:featured, true) }
 
-    context "`#{type}`carousel" do
+    context "`#{type}` carousel" do
       it 'does not show when not enabled' do
         carousel.update_attribute(:location, nil)
         visit path
