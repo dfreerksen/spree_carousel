@@ -1,12 +1,26 @@
 require 'spec_helper'
 
-feature 'Product details page sidebar' do
+feature 'Product listing sidebar' do
   %w(featured latest).each do |type|
+    let(:carousel) { create(:"carousel_#{type}") }
+    let(:product)  { create(:product) }
+    let(:path)     { spree.products_path }
+    let(:location) { 'sidebar_products' }
+    let(:element)  { '[data-hook="homepage_sidebar_navigation"] .carousel' }
+
+    before { product.update_attribute(:featured, true) }
+
     context "`#{type}`carousel" do
-      xit 'shows when enabled' do
+      it 'does not show when not enabled' do
+        carousel.update_attribute(:location, nil)
+        visit path
+        expect(page).to_not have_css(element)
       end
 
-      xit 'does not show when not enabled' do
+      it 'shows when enabled' do
+        carousel.update_attribute(:location, location)
+        visit path
+        expect(page).to have_css(element)
       end
     end
   end
