@@ -7,7 +7,7 @@ en:
       admin:
         sidebar: Carousels
         none: No carousels available
-        no_display: Do not display
+        no_display: Not shown
         title:
           index: Carousels
           edit: 'Edit Carousel `%{title}`'
@@ -17,7 +17,6 @@ en:
           create: New Carousel
         headers:
           title: Name
-          group: Type
           location: Location
         legends:
           general: Carousel
@@ -90,9 +89,7 @@ en:
           home: Top of home page only
           wrapper_top: Top of all pages
           wrapper_bottom: Bottom of all pages
-          sidebar_home: Sidebar on home page (vertical)
-          sidebar_products: Sidebar on product listing pages (vertical)
-          sidebar_taxons: Sidebar on taxon listing pages (vertical)
+          sidebar: Sidebar of product listing pages
           products: Under product details
         lazyload:
           ondemand: On Demand

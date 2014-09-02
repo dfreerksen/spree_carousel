@@ -9,6 +9,10 @@ module Spree
         @carousels = Spree::Carousel.all
       end
 
+      def edit
+        @disabled = Spree::Carousel.where.not(id: @carousel.id).map(&:location)
+      end
+
       def update
         if @carousel.update_attributes(carousel_params)
           redirect_to admin_carousels_path, flash: {

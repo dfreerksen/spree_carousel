@@ -11,6 +11,14 @@
     </div>
 
     <div class="row">
+      <div class="field">
+        <%= f.label :location, Spree.t('carousel.admin.label.location') %>
+        <%= f.select :location, carousel_location_values, { include_blank: Spree.t('carousel.admin.no_display'), disabled: @disabled }, { class: 'select2 fullwidth' } %>
+        <span class="info fullwidth"><%= Spree.t('carousel.admin.description.location') %></span>
+      </div>
+    </div>
+
+    <div class="row">
       <div class="alpha six columns">
         <div class="field">
           <%= f.label :easing, Spree.t('carousel.admin.label.easing') %>

@@ -7,14 +7,12 @@
 <table class="index" id='listing_carousels' data-hook>
   <colgroup>
     <col style="width: 65%" />
-    <col style="width: 15%" />
-    <col style="width: 15%" />
+    <col style="width: 30%" />
     <col style="width: 5%" />
   </colgroup>
   <thead>
-    <tr data-hook="tax_header">
+    <tr data-hook="carousel_header">
       <th><%= Spree.t('carousel.admin.headers.title') %></th>
-      <th><%= Spree.t('carousel.admin.headers.group') %></th>
       <th><%= Spree.t('carousel.admin.headers.location') %></th>
       <th class="actions"></th>
     </tr>
@@ -22,19 +20,14 @@
   <tbody>
     <% if @carousels.any? %>
     <% @carousels.each do |carousel| %>
-    <tr data-hook="links_row" class="<%= cycle('odd', 'even')%>">
+    <tr data-hook="carousel_row" class="<%= cycle('odd', 'even')%>">
       <td><%= carousel.title %></td>
-      <td><%= carousel.group %></td>
-      <td><%= carousel.location %></td>
+      <td><%= carousel_location_values.key(carousel.location) %></td>
       <td class="actions">
         <%= link_to_edit(carousel, { no_text: true, url: edit_admin_carousel_path(carousel.id) }) %>
       </td>
     </tr>
     <% end %>
-    <% else %>
-    <tr data-hook="links_none" class="<%= cycle('odd', 'even')%>">
-      <td><%= Spree.t('carousel.admin.none') %></td>
-    </tr>
     <% end %>
   </tbody>
 </table>
