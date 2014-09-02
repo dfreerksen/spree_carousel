@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Spree::Admin::CarouselsHelper do
   context '#carousel_location_values' do
-    it 'should return 6 items' do
-      expect(helper.carousel_location_values.size).to eq(6)
+    it 'should return 5 items' do
+      expect(helper.carousel_location_values.size).to eq(5)
     end
   end
 

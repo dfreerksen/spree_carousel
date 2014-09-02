@@ -91,7 +91,8 @@ en:
           wrapper_top: Top of all pages
           wrapper_bottom: Bottom of all pages
           sidebar_home: Sidebar on home page (vertical)
-          sidebar_products: Sidebar on listing pages (vertical)
+          sidebar_products: Sidebar on product listing pages (vertical)
+          sidebar_taxons: Sidebar on taxon listing pages (vertical)
           products: Under product details
         lazyload:
           ondemand: On Demand

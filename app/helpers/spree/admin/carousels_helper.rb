@@ -3,7 +3,7 @@ module Spree
     module CarouselsHelper
       def carousel_location_values
         %w(
-          home wrapper_top wrapper_bottom sidebar_home sidebar_products products
+          home wrapper_top wrapper_bottom sidebar products
         ).each_with_object({}) do |value, collection|
           collection[Spree.t("carousel.admin.location.#{value}")] = value
         end
