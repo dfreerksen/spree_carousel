@@ -1,6 +1,6 @@
 # Spree Carousel
 
-Create product carousels for different partos of the site using [http://kenwheeler.github.io/slick/](Slick). This extension only works with products. It does not work with custom items like HTML or image content.
+Create product carousels for different parts of the site using [http://kenwheeler.github.io/slick/](Slick). This extension only works with products. It does not work with custom items like HTML or image content.
 
 > NOTE: Not ready for production
 
@@ -32,10 +32,13 @@ After installing, you'll need to run the generator:
 
 
 ## TODO
-- Taxon sidebar carousel
 - Per carousel breakpoints
 - More types of content
-  - 'popular' carousel based on purchases
+  - 'popular' carousel (based on purchases)
+- Per product carousels
+  - Related products
+  - Similar products
+  - Upsell
 
 
 ## Testing
